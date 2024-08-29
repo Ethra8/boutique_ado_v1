@@ -78,11 +78,11 @@ a.category-badge > span.badge:hover {
 }
 
 .btt-button {
-    position: fixed !important;
-    bottom: 10px !important;
-    right: 10px !important;
-    height: 42px !important;
-    width: 42px !important;
+    height: 42px;
+    width: 42px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
 }
 
 .btt-link {
