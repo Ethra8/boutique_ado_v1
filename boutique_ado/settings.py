@@ -28,6 +28,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['8000-ethra8-boutiqueadov1-cran5479evy.ws.codeinstitute-ide.net']
 
+CSRF_TRUSTED_ORIGINS = ['https://8000-ethra8-boutiqueadov1-cran5479evy.ws.codeinstitute-ide.net']
+
 
 # Application definition
 
@@ -70,6 +72,7 @@ TEMPLATES = [
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
+
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request', # required by allauth
                 'django.contrib.auth.context_processors.auth',
