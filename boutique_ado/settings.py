@@ -28,8 +28,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['8000-ethra8-boutiqueadov1-cran5479evy.ws.codeinstitute-ide.net']
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-ethra8-boutiqueadov1-cran5479evy.ws.codeinstitute-ide.net',
-'https://8000-ethra8-boutiqueadov1-cran5479evy.ws.codeinstitute-ide.net/checkout/',]
+CSRF_TRUSTED_ORIGINS = ['https://8000-ethra8-boutiqueadov1-cran5479evy.ws.codeinstitute-ide.net',]
 
 
 # Application definition

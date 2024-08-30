@@ -20,13 +20,14 @@
         <div class="row">
             <div class="col">
                 <hr>
-                <h2 class="logo-font mb-4">Shopping Bag</h2>
+                <h2 class="logo-font mb-4">Checkout</h2>
                 <hr>
             </div>
         </div>
 
         <div class="row">
             <div class="col-12 col-lg-6 order-lg-last mb-5">
+                <p class="text-muted"><span class="logo-font">Order Summary </span>({{ product_count }} items)</p>
                 <div class="row">
                     <div class="col-7 offset-2">
                         <p class="mb-1 mt-0 small text-muted">Item</p>
@@ -74,7 +75,7 @@
             <div class="col-12 col-lg-6">
                 <p class="text-muted">Please fill out the form below to complete your order</p>
                 <form action="{% url 'checkout' %}" method="POST" id="payment-form">
-                    {{% csrf_token %}}
+                    {% csrf_token %}
                     <fieldset class="rounded px-3 mb-5">
                         <legend class="fieldset-label small text-black px-2 w-auto">Details</legend>
                         {{ order_form.full_name | as_crispy_field }}
@@ -97,6 +98,7 @@
                                 <a class="text-info" href="{% url 'account_signup' %}">Create an account</a> or
                                 <a class="text-info" href="{% url 'account_login' %}">login</a> to save this information
                             </label>
+                            {% endif %}
                         </div>
                     </fieldset>
                     <fieldset class="px-3">
