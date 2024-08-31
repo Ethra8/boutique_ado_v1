@@ -1,4 +1,5 @@
 import uuid
+import os
 
 from django.db import models
 from django.db.models import Sum
@@ -28,7 +29,7 @@ class Order(models.Model):
         return uuid.uuid4().hex.upper()
 
     def update_total(self):
-        self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum']
+        self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum'] or 0
         if self.order_total < settings.FREE_DELIVERY_THRESHOLD:
             self.delivery_cost = self.order_total * settings.FREE_DELIVERY_THRESHOLD / 100
         else:

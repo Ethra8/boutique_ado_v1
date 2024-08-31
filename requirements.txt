@@ -3,5 +3,7 @@ Django==5.1
 django-allauth==64.1.0
 django-crispy-forms==1.14.0
 pillow==10.4.0
+python-dotenv==1.0.1
 pytz==2024.1
 sqlparse==0.5.1
+stripe==10.9.0
