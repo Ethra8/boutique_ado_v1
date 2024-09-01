@@ -28,6 +28,6 @@ class UserProfile(models.Model):
 def create_or_update_user_profile(sender, instance, created, **kwargs):
     """ Create or update user profile """
     if created:
-        UserProfile.objects.create(user=instance)
+        UserProfile.objects.create(default_user=instance)
     # existing users: just save the profile
     instance.userprofile.save()
