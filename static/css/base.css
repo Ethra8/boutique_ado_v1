@@ -204,7 +204,8 @@ input[name='q']::placeholder {
 }
 
 .allauth-form-inner-content button,
-.allauth-form-inner-content input[type='submit'] {
+.allauth-form-inner-content input[type='submit'],
+#profile-update-form button {
 	/* btn */
 	display: inline-block;
     font-weight: 400;
@@ -227,7 +228,8 @@ input[name='q']::placeholder {
 }
 
 .allauth-form-inner-content button:hover,
-.allauth-form-inner-content input[type='submit']:hover {	
+.allauth-form-inner-content input[type='submit']:hover,
+#profile-update-form button:hover {	
 	color: #fff;
     background-color: #222;
     border-color: #222;
