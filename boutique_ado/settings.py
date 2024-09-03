@@ -36,7 +36,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEVELOPMENT' in os.environ
 
-ALLOWED_HOSTS = ['boutique-ado-edna-19846c7030b7.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['boutique-ado-edna-19846c7030b7.herokuapp.com', 'localhost', '8000-ethra8-boutiqueadov1-cran5479evy.ws.codeinstitute-ide.net']
 
 CSRF_TRUSTED_ORIGINS = ['https://8000-ethra8-boutiqueadov1-cran5479evy.ws.codeinstitute-ide.net',]
 
