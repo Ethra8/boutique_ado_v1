@@ -14,6 +14,9 @@ from pathlib import Path
 import os
 import dj_database_url
 
+if os.path.isfile("env.py"):
+    import env
+
  # fixed bug due to newer django version used (5.1) discrepancies, by adding the code in https://stackoverflow.com/questions/77667419/problem-after-upgrading-to-django-5-0-attributeerror-blankchoiceiterator-obj
 from django_countries.widgets import LazyChoicesMixin
 
@@ -207,6 +210,13 @@ if 'USE_AWS' in os.environ:
     # Override static and media URLs in production
     STATIC_URL = f'{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
     MEDIA_URL = f'{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
+    
+    STORAGES = {
+    "default": {"BACKEND": "custom_storages.MediaStorage"},
+    "staticfiles": {"BACKEND": "custom_storages.StaticStorage"},
+    }
+
+
 
 
 FREE_DELIVERY_THRESHOLD = 50
