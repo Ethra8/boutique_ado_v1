@@ -33,7 +33,7 @@ SECRET_KEY = 'django-insecure-&j&_2f#yk$lh2$js=cs64b*2b$6@d-49l@%=q-p+$37m)*tg@m
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-ethra8-boutiqueadov1-cran5479evy.ws.codeinstitute-ide.net', 'boutique-ado-edna.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['8000-ethra8-boutiqueadov1-cran5479evy.ws.codeinstitute-ide.net', 'boutique-ado-edna.herokuapp.com', 'boutique-ado-edna-19846c7030b7.herokuapp.com', 'localhost']
 
 CSRF_TRUSTED_ORIGINS = ['https://8000-ethra8-boutiqueadov1-cran5479evy.ws.codeinstitute-ide.net',]
 
